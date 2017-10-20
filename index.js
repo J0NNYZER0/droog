@@ -5,13 +5,19 @@ const Hapi = require('hapi'),
   Utils = require('./utils').Utils,
   Routes = require('./routes').Routes
 
-Server.connection({ 
-    host: 'localhost', 
+Server.connection({
+    host: 'localhost',
     port: 8000
 })
 
 // Add the route
-Server.route([].concat(Routes.Inventory))
+Server.route(
+  [].concat(
+    Routes.Inventory,
+    Routes.Products,
+    Routes.Bags,
+    Routes.Orders
+  ))
 
 // Start the server
 Server.start(err => {

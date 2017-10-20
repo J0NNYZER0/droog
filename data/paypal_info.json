@@ -1,0 +1,69 @@
+{
+   "ack":"success",
+   "data":{
+      "id":"PAY-43C31381N57354703LHUZLKI",
+      "intent":"sale",
+      "state":"approved",
+      "cart":"182091666E499441J",
+      "create_time":"2017-10-20T06:20:33Z",
+      "payer":{
+         "payment_method":"paypal",
+         "status":"VERIFIED",
+         "payer_info":{
+            "email":"bogus12341234@bogus.com",
+            "first_name":"Bogus",
+            "middle_name":"Bogus",
+            "last_name":"Bogus",
+            "payer_id":"YVBHDRLFV7LUC",
+            "country_code":"US",
+            "shipping_address":{
+               "recipient_name":"Bogus Bogus",
+               "line1":"1 Main St",
+               "city":"San Jose",
+               "state":"CA",
+               "postal_code":"95131",
+               "country_code":"US"
+            }
+         }
+      },
+      "transactions":[
+         {
+            "amount":{
+               "total":"0.01",
+               "currency":"USD",
+               "details":{
+
+               }
+            },
+            "item_list":{
+
+            },
+            "related_resources":[
+               {
+                  "sale":{
+                     "id":"4SA79347286076246",
+                     "state":"completed",
+                     "payment_mode":"INSTANT_TRANSFER",
+                     "protection_eligibility":"ELIGIBLE",
+                     "parent_payment":"PAY-43C31381N57354703LHUZLKI",
+                     "create_time":"2017-10-20T06:20:33Z",
+                     "update_time":"2017-10-20T06:20:33Z",
+                     "amount":{
+                        "total":"0.01",
+                        "currency":"USD",
+                        "details":{
+                           "subtotal":"0.01"
+                        }
+                     }
+                  }
+               }
+            ]
+         }
+      ]
+   },
+   "meta":{
+      "calc":"eb2a6adeb9bc9",
+      "rlog":"rZJvnqaaQhLn%2FnmWT8cSUtwSUe%2B7Jlw%2Be%2BCxP%2BU439oRaUQpyw2KPyqU4cQXEAkoRvoSgWo4Bgenp3frPm9kWw_15f3870ba90"
+   },
+   "server":"9J3-M4Qhbv3sDsK_cVds692dVEYXg8ld4Ci-KLKV6Kn6_96xcU0ouJ4VpCLw0GEO06j7FLEG71FA5Aa9j9fBn11OM_Booi20UpMrNKYsP4iCrYbBTFyAL8Xo-RdPjvqU2fLvD-apYqKPlsIfjvjViKaYV_RqMsi_6YjEqoeeaVxbPSb06gP0oc5zZWOiFx4nN8LwyJFg8MlM5_i-5nLCxxtmtVbgHJFwEtqNbkGV_DDLqzAhYP3mNZOk6EMaP_f6ViXfJxUb3ou"
+}
