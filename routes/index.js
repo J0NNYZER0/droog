@@ -1,7 +1,8 @@
 'use strict';
-const Handlers = require('../handlers').Handlers
 
-const Routes = {
+const Joi = require('joi');
+const Handlers = require('../handlers').Handlers,
+Routes = {
   Bags: [
     {
       method: 'GET',
@@ -11,6 +12,13 @@ const Routes = {
     {
       method: 'GET',
       path: '/bag/{id}',
+      config: {
+        validate: {
+          params: {
+            id: Joi.number().max(11).required()
+          }
+        }
+      },
       handler: Handlers.Bag.Get
     },
     {

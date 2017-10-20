@@ -20,8 +20,6 @@ Server.route(
   ))
 
 // Start the server
-Server.start(err => {
-
-    if (err) throw err;
-    console.log('Server running at:', Server.info.uri, 'on ' + Utils.CreateHumanReadableDate());
-})
+Server.start()
+  .then(() => console.log('Server running at:', Server.info.uri, 'on ' + Utils.CreateHumanReadableDate()))
+  .catch((e) => console.log(e))

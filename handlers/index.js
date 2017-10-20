@@ -1,5 +1,4 @@
 'use strict';
-//const Utils = require('../utils').Utils
 const Bags = require('../api').Bags,
   Inventory = require('../api').Inventory,
   Orders = require('../api').Orders,

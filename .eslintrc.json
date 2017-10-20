@@ -1,0 +1,11 @@
+{
+    "extends": "eslint-config-hapi",
+    "plugins": [
+        "standard",
+        "promise"
+    ],
+    "rules": {
+      "indent": ["error", "tab"],
+      "semi": ["error", "never"]
+    }
+}

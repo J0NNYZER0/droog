@@ -1,3 +1,5 @@
+'use strict'
+
 const Sequelize = require('sequelize'),
   Url = require('url'),
   Utils = require('./../utils'),

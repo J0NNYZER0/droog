@@ -1,4 +1,5 @@
 'use strict';
+
 const Fs = require('fs'),
   Path = require('path')
 
