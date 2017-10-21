@@ -8,7 +8,7 @@
       "indent": ["error", "tab"],
       "semi": ["error", "never"],
       "one-var": ["error", "always"],
-      "sort-vars": [1, { "ignoreCase": true }],
+      "sort-vars": [0, { "ignoreCase": true }],
       "arrow-parens": [1, "always"]
     }
 }
