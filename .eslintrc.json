@@ -12,6 +12,7 @@
       "arrow-parens": [1, "always"],
       "quotes": ["error", "single"],
       "comma-dangle": ["error", "never"],
-      "no-var": "error"
+      "no-var": "error",
+      "arrow-parens": [0, "as needed"]
     }
 }
