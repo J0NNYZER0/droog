@@ -9,6 +9,9 @@
       "semi": ["error", "never"],
       "one-var": ["error", "always"],
       "sort-vars": [0, { "ignoreCase": true }],
-      "arrow-parens": [1, "always"]
+      "arrow-parens": [1, "always"],
+      "quotes": ["error", "single"],
+      "comma-dangle": ["error", "never"],
+      "no-var": "error"
     }
 }
