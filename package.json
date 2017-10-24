@@ -13,15 +13,18 @@
   "author": "J0NNYZER0",
   "license": "ISC",
   "dependencies": {
-    "eslint-config-hapi": "^10.1.0",
-    "eslint-plugin-hapi": "^4.0.0",
     "hapi": "^16.6.2",
+    "hapi-swagger": "^8.0.0",
+    "inert": "^4.2.1",
     "joi": "^13.0.1",
     "mysql2": "^1.4.2",
-    "sequelize": "^4.15.0"
+    "sequelize": "^4.15.0",
+    "vision": "^4.1.1"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
+    "eslint-config-hapi": "^10.1.0",
+    "eslint-plugin-hapi": "^4.0.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
