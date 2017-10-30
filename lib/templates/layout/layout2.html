@@ -15,67 +15,119 @@
           }
           body {
             font-family: 'NeutrafaceDisplayTitling';
-            text-align: center;
-            background: #ff6600;
+            background: #ffffff;
             /*background: #E49AC3;*/
             transition: background 500ms ease;
             color: #000;
           }
-          h1, h2 {
+          .droog-api > div:nth-child(2) {
+            min-height: calc(100vh - 200px);
+            margin: auto 20px 40px;
+          }
+          h1, h2, .logo-text {
             line-height: .85em;
             font-family: 'NeutrafaceDisplayTitling';
           }
-          .api h1 {
+          .droog-api h1 {
             font-size: 4em;
           }
-          .api h2 span.v {
+          .droog-api h2 span.v {
             font-size: 1.5em;
           }
-          .api h2 span.v-number {
+          .droog-api h2 span.v-number {
             font-size: 2em;
           }
           body:hover, body:active {
             /*background: #ef9610;*/
-            background: #ff6600;
+            background: #ffffff;
             color: #000000;
             transition: background 3s ease-in, color 3s ease-in;
           }
-          a {
-            width: calc(100% - 60px);
-            margin: 10px;
-            box-shadow: #666666 0px -3px 7px 0px inset;
-            background: linear-gradient(#999999 5%, #000000 100%) #999999;
-            border-radius: 3px;
-            border: 1px solid #0b0e07;
-            display: inline-block;
-            cursor: pointer;
-            color: #FFFFFF;
-            text-shadow: 1px 1px 2px rgba(22, 22, 22, 0.25);
-            font-size: 3em;
-            padding: 20px;
-            text-decoration: none;
-            text-shadow: #263666 0px 1px 0px;
-            outline: none;
-            font-family: 'NeutrafaceDisplayTitling';
-            font-weight: bold;
+          .info_title {
+            display:none;
           }
-          a:hover {
-            background: linear-gradient(#000000 5%, #999999 100%) #000000;
+          .droog-header-wrapper,
+          .droog-footer-wrapper {
+            width: 100%;
+            background: #FF6600;
+          }
+          ul.droog-header,
+          ul.droog-footer {
+            display: table;
+            width: 100%;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100px;
+          }
+          ul.droog-header li {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: left;
+          }
+          ul.droog-header li:first-child,
+          ul.droog-footer li:last-child {
+            width: 70px;
+          }
+          ul.droog-footer li {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
           }
           .logo {
+            display: inline-block;
+            width:50px;
+            height:50px;
+            margin-left: 20px;
             background: url(assets/images/logo.svg) no-repeat 50% 50% / 100%;
-            width:350px;
-            height:350px;
-            margin: auto;
-            margin-top: 100px;
           }
-
+          .logo-text {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 1.5em;
+          }
+          /*SWAGGER OVERRIDES*/
+          .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading h3 span.http_method a {
+            background-color: #ff6600 !important;
+          }
+          .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading {
+            background-color: #f6f6f6 !important;
+            border: 1px solid #f0f0f0 !important;
+          }
+          .swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation.get div.heading ul.options li a {
+            color: #000 !important;
+          }
     </style>
     </head>
     <body>
-      <div class="api">
-        <div class="logo"></div>
+      <div class="droog-api">
+        <div class="droog-header-wrapper">
+          <ul class="droog-header">
+            <li>
+              <a href="/"><span class="logo"></span></a>
+            </li>
+            <li>
+              <span class="logo-text">Droog API</span>
+            </li>
+            <li>
+              &nbsp;
+            </li>
+          </ul>
+        </div>
         <div>{{{ content }}}</div>
+        <div class="droog-footer-wrapper">
+          <ul class="droog-footer">
+            <li>
+              &nbsp;
+            </li>
+            <li>
+              <span class="logo-text">Droog API</span>
+            </li>
+            <li>
+              <span class="logo"></span>
+            </li>
+          </ul>
+        </div>
       </div>
     </body>
 </html>
