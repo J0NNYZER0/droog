@@ -3,6 +3,11 @@
     <head>
         <title>{{title}}</title>
         <style>
+          * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+          }
           @font-face {
             font-family: 'NeutrafaceDisplayTitling';
             src: url('assets/fonts/neutraface/Neutraface2Display-Titling.eot');
@@ -21,18 +26,22 @@
             transition: background 500ms ease;
             color: #000;
           }
-          h1, h2 {
+          h1, h2, p {
             line-height: .85em;
             font-family: 'NeutrafaceDisplayTitling';
+            margin: 25px auto;
           }
-          .api h1 {
-            font-size: 4em;
+          h1 {
+            font-size: 3em;
           }
-          .api h2 span.v {
+          h2 span.v {
             font-size: 1.5em;
           }
-          .api h2 span.v-number {
+          h2 span.v-number {
             font-size: 2em;
+          }
+          p {
+            font-size: 1.25em;
           }
           body:hover, body:active {
             /*background: #ef9610;*/
@@ -64,19 +73,26 @@
           }
           .logo {
             background: url(assets/images/logo.svg) no-repeat 50% 50% / 100%;
-            width:240px;
-            height:240px;
+            width:200px;
+            height:200px;
             margin: auto;
-            margin-top: 50px;
+            margin: 50px auto;
           }
 
     </style>
     </head>
     <body>
       <div class="api">
-        <div class="logo"></div>
-        <h2>{{{ content }}}</h2>
-        <a href="/documentation">API documentation</a>
+        <div class="header">
+          <div class="logo"></div>
+          <h2>{{{ content }}}</h2>
+        </div>
+        <div class="main">
+          <div class="content">
+            <p>A simple framework for managing a simple store</p>
+          </div>
+          <a href="/documentation">API documentation</a>
+        </div>
       </div>
     </body>
 </html>
