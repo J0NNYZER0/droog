@@ -2,8 +2,7 @@
   "name": "droog",
   "version": "1.0.0",
   "engines": {
-    "node": ">=8.3.0",
-    "npm": ">=5.5.1"
+    "npm": ">=3"
   },
   "description": "",
   "main": "index.js",
