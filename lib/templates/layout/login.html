@@ -20,6 +20,16 @@
             font-weight: 900;
             font-style: normal;
           }
+          @font-face {
+            font-family: 'NeutrafaceDisplayBold';
+            src: url('assets/fonts/neutraface/Neutraface2Display-Bold.eot');
+            src: url('assets/fonts/neutraface/Neutraface2Display-Bold.eot?#iefix') format('embedded-opentype'),
+              url('assets/fonts/neutraface/Neutraface2Display-Bold.woff2') format('woff2'),
+              url('assets/fonts/neutraface/Neutraface2Display-Bold.woff') format('woff'),
+              url('assets/fonts/neutraface/Neutraface2Display-Bold.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+          }
           body {
             font-family: 'NeutrafaceDisplayTitling';
             text-align: center;
@@ -30,8 +40,13 @@
           }
           h1, h2, p {
             line-height: .85em;
-            font-family: 'NeutrafaceDisplayTitling';
             margin: 25px auto;
+          }
+          h1, h2 {
+            font-family: 'NeutrafaceDisplayTitling';
+          }
+          p {
+            font-family: 'NeutrafaceDisplayBold';
           }
           h1 {
             font-size: 3em;
@@ -40,7 +55,7 @@
             font-size: .75em;
           }
           p {
-            font-size: 1.25em;
+            font-size: 2.25em;
           }
           body:hover, body:active {
             /*background: #ef9610;*/
@@ -67,7 +82,7 @@
             text-overflow: clip;
             background: #fcfcfc;
             outline: none;
-            font-family: 'NeutrafaceDisplayTitling';
+            font-family: 'NeutrafaceDisplayBold';
           }
           input[type=submit] {
             width: calc(100% - 60px);
