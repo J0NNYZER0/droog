@@ -1,4 +1,15 @@
-<div>
-    <h1>{{api}}</h1>
-    <h2><span class="v">v</span><span class="v-number">{{version}}</span></h2>
+<div class="api">
+  <div class="header">
+    <div class="logo"></div>
+    <h1>{{message}}</h1>
+  </div>
+  <div class="main">
+    <div class="content">
+      <h2>{{description}}</h2>
+    </div>
+    <a href="/documentation">{{buttonText}}</a>
+    <form class="login-form" method="post" action="/account/logout">
+      <input type="submit" value="Logout" />
+    </form>
+  </div>
 </div>

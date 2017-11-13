@@ -66,6 +66,9 @@
             vertical-align: middle;
             text-align: left;
           }
+          ul.droog-header li:last-child {
+            text-align: right;
+          }
           ul.droog-header li:first-child,
           ul.droog-footer li:last-child {
             width: 70px;
@@ -124,6 +127,26 @@
             background-color: #f0f0f0 !important;
             border: none !important;
           }
+          input[type=submit] {
+            box-shadow: #666666 0px -3px 7px 0px inset;
+            background: linear-gradient(#999999 5%, #000000 100%) #999999;
+            border: 3px solid #0b0e07;
+            display: inline-block;
+            cursor: pointer;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 2px rgba(22, 22, 22, 0.25);
+            font-size: 1em;
+            padding: 10px;
+            text-decoration: none;
+            text-shadow: #263666 0px 1px 0px;
+            outline: none;
+            font-family: 'NeutrafaceDisplayTitling';
+            font-weight: bold;
+            margin-right: 30px;
+          }
+          input[type=submit]:hover {
+            background: linear-gradient(#000000 5%, #999999 100%) #000000;
+          }
     </style>
     </head>
     <body>
@@ -137,7 +160,9 @@
               <span class="logo-text">Droog API&nbsp;v{{ version }}</span>
             </li>
             <li>
-              &nbsp;
+              <form class="login-form" method="post" action="/account/logout">
+                <input type="submit" value="Logout" />
+              </form>
             </li>
           </ul>
         </div>
