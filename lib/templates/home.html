@@ -4,7 +4,7 @@
     <div class="submission">
       <div class="comment">
         <div class="bubble">
-          <p class="welcome-message">Hi, {{username}}</p>
+          <p class="welcome-message">Hi, {{username}}!</p>
           <!--p class="created-date">&nbsp;</p-->
         </div>
       </div>
@@ -13,9 +13,10 @@
   </div>
   <div class="main">
     <div class="content">
-      <h2>{{description}}</h2>
+      <!--span class="v">v</span><span class="v-number">{{version}}</span-->
     </div>
     <a href="/documentation">{{buttonText}}</a>
+    <a href="mailto:hello@droogapi.com">{{mailButtonText}}</a>
     <form class="login-form" method="post" action="/account/logout">
       <input type="submit" value="Logout" />
     </form>
