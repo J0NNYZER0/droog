@@ -1,6 +1,15 @@
 <div class="api">
   <div class="header">
     <div class="logo"></div>
+    {{#if message}}
+    <div class="submission">
+      <div class="comment">
+        <div class="bubble">
+          <p class="welcome-message">{{message}}</p>
+        </div>
+      </div>
+    </div>
+    {{/if}}
     <h2>
       <div>
         <h1>{{api}}<span class="v">v</span><span class="v-number">{{version}}</span></h1>

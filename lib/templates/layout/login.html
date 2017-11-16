@@ -109,8 +109,64 @@
             width:200px;
             height:200px;
             margin: auto;
-            margin: 50px auto;
+            margin: 50px auto 25px;
           }
+          .submission {
+            flex-direction: column-reverse;
+          }
+          .bubble
+          {
+            position: relative;
+            width: calc(100% - 60px);
+            max-width: 840px;
+            height: auto;
+            padding: 0px;
+            background: #FFFFFF;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            border: #000 solid 3px;
+            text-align: center;
+            margin: auto;
+          }
+          .comment {
+            margin-left: 0px;
+          }
+          .bubble:after
+          {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 14px 15px;
+            border-color: #FFFFFF transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+            margin-left: -14px;
+            top: -13px;
+            right: 50%;
+          }
+          .bubble:before
+          {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 16px 17px;
+            border-color: #000 transparent;
+            display: block;
+            width: 0;
+            z-index: 0;
+            margin-left: -16px;
+            top: -18px;
+            right: calc(50% - 2px);
+          }
+          .welcome-message {
+            line-height: 100px;
+            font-family: 'NeutrafaceDisplayBold';
+            font-size: 4.5em;
+            margin: 25px auto;
+          }
+
 
     </style>
     </head>
