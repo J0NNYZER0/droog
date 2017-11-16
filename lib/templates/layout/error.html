@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <style>
+          * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+          }
+          @font-face {
+            font-family: 'NeutrafaceDisplayTitling';
+            src: url('assets/fonts/neutraface/Neutraface2Display-Titling.eot');
+            src: url('assets/fonts/neutraface/Neutraface2Display-Titling.eot?#iefix') format('embedded-opentype'),
+              url('assets/fonts/neutraface/Neutraface2Display-Titling.woff2') format('woff2'),
+              url('assets/fonts/neutraface/Neutraface2Display-Titling.woff') format('woff'),
+              url('assets/fonts/neutraface/Neutraface2Display-Titling.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+          }
+          @font-face {
+            font-family: 'NeutrafaceDisplayBold';
+            src: url('assets/fonts/neutraface/Neutraface2Display-Bold.eot');
+            src: url('assets/fonts/neutraface/Neutraface2Display-Bold.eot?#iefix') format('embedded-opentype'),
+              url('assets/fonts/neutraface/Neutraface2Display-Bold.woff2') format('woff2'),
+              url('assets/fonts/neutraface/Neutraface2Display-Bold.woff') format('woff'),
+              url('assets/fonts/neutraface/Neutraface2Display-Bold.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+          }
+          body {
+            font-family: 'NeutrafaceDisplayTitling';
+            text-align: center;
+            background: #ff6600;
+            /*background: #E49AC3;*/
+            transition: background 500ms ease;
+            color: #000;
+          }
+          h1, h2, p {
+            line-height: .85em;
+            margin: 25px auto;
+          }
+          h1, h2 {
+            font-family: 'NeutrafaceDisplayTitling';
+          }
+          p {
+            font-family: 'NeutrafaceDisplayBold';
+          }
+          h1 {
+            font-size: 3em;
+          }
+          span.v {
+            font-size: .75em;
+          }
+          p {
+            font-size: 2.25em;
+          }
+          body:hover, body:active {
+            /*background: #ef9610;*/
+            background: #ff6600;
+            color: #000000;
+            transition: background 3s ease-in, color 3s ease-in;
+          }
+          a {
+            width: calc(100% - 60px);
+            max-width: 840px;
+            margin: 10px;
+            box-shadow: #666666 0px -3px 7px 0px inset;
+            background: linear-gradient(#999999 5%, #000000 100%) #999999;
+            border-radius: 3px;
+            border: 3px solid #0b0e07;
+            display: inline-block;
+            cursor: pointer;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 2px rgba(22, 22, 22, 0.25);
+            font-size: 3em;
+            padding: 10px;
+            text-decoration: none;
+            text-shadow: #263666 0px 1px 0px;
+            outline: none;
+            font-family: 'NeutrafaceDisplayTitling';
+            font-weight: bold;
+          }
+          a:hover {
+            background: linear-gradient(#000000 5%, #999999 100%) #000000;
+          }
+          .logo {
+            background: url(../assets/images/logo.svg) no-repeat 50% 50% / 100%;
+            width:200px;
+            height:200px;
+            margin: auto;
+            margin: 50px auto 25px;
+          }
+          .submission {
+            flex-direction: column-reverse;
+          }
+          .bubble
+          {
+            position: relative;
+            width: calc(100% - 60px);
+            max-width: 840px;
+            height: auto;
+            padding: 0px;
+            background: #FFFFFF;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            border: #000 solid 3px;
+            text-align: center;
+            margin: auto;
+          }
+          .comment {
+            margin-left: 0px;
+          }
+          .bubble:after
+          {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 14px 15px;
+            border-color: #FFFFFF transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+            margin-left: -14px;
+            top: -13px;
+            right: 50%;
+          }
+          .bubble:before
+          {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 16px 17px;
+            border-color: #000 transparent;
+            display: block;
+            width: 0;
+            z-index: 0;
+            margin-left: -16px;
+            top: -18px;
+            right: calc(50% - 2px);
+          }
+          .welcome-message {
+            line-height: 100px;
+            font-family: 'NeutrafaceDisplayBold';
+            font-size: 4.5em;
+            margin: 25px auto;
+          }
+
+
+    </style>
+    </head>
+    <body>
+      {{{content}}}
+    </body>
+</html>
