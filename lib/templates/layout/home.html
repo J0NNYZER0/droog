@@ -19,6 +19,16 @@
             font-weight: 900;
             font-style: normal;
           }
+          @font-face {
+            font-family: 'NeutrafaceDisplayBold';
+            src: url('assets/fonts/neutraface/Neutraface2Display-Bold.eot');
+            src: url('assets/fonts/neutraface/Neutraface2Display-Bold.eot?#iefix') format('embedded-opentype'),
+              url('assets/fonts/neutraface/Neutraface2Display-Bold.woff2') format('woff2'),
+              url('assets/fonts/neutraface/Neutraface2Display-Bold.woff') format('woff'),
+              url('assets/fonts/neutraface/Neutraface2Display-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+          }
           body {
             font-family: 'NeutrafaceDisplayTitling';
             text-align: center;
@@ -157,9 +167,10 @@
           right: calc(50% - 2px);
         }
         .welcome-message {
-          margin: auto;
           line-height: 100px;
-          font-size: 2.5em;
+          font-family: 'NeutrafaceDisplayBold';
+          font-size: 4.5em;
+          margin: 25px auto;
         }
 
 
