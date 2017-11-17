@@ -7,7 +7,7 @@
 #
 # Host: us-iron-auto-dca-05-b.cleardb.net (MySQL 5.6.36-log)
 # Database: heroku_a78349146e1c7a4
-# Generation Time: 2017-11-17 02:32:27 +0000
+# Generation Time: 2017-11-17 18:27:07 +0000
 # ************************************************************
 
 
@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `accounts`;
 
 CREATE TABLE `accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(245) NOT NULL,
+  `username` varchar(245) NOT NULL,
   `password` varchar(245) NOT NULL,
   `is_subscribed` tinyint(1) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -40,9 +40,36 @@ LOCK TABLES `accounts` WRITE;
 
 INSERT INTO `accounts` (`id`, `user_name`, `password`, `is_subscribed`, `created_date`, `updated_date`)
 VALUES
-	(12,'jonny','0',0,'2017-11-16 17:56:33','2017-11-16 17:56:33');
+	(0,'jonny','0',0,'2017-11-16 17:56:33','2017-11-17 16:16:45');
 
 /*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table accounts_roles
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `accounts_roles`;
+
+CREATE TABLE `accounts_roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `account_id` int(11) NOT NULL,
+  `role_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `accounts_roles` WRITE;
+/*!40000 ALTER TABLE `accounts_roles` DISABLE KEYS */;
+
+INSERT INTO `accounts_roles` (`id`, `account_id`, `role_id`)
+VALUES
+	(0,0,0),
+	(1,0,1),
+	(2,0,2),
+	(3,0,3),
+	(4,0,4);
+
+/*!40000 ALTER TABLE `accounts_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
@@ -187,8 +214,7 @@ DROP TABLE IF EXISTS `order_status`;
 
 CREATE TABLE `order_status` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `order_id` int(11) NOT NULL,
-  `step` varchar(20) NOT NULL,
+  `code` int(11) NOT NULL,
   `status` varchar(20) NOT NULL,
   `details` varchar(500) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -198,6 +224,29 @@ CREATE TABLE `order_status` (
 
 
 
+# Dump of table order_types
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `order_types`;
+
+CREATE TABLE `order_types` (
+  `id` int(11) NOT NULL,
+  `type` varchar(25) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `order_types` WRITE;
+/*!40000 ALTER TABLE `order_types` DISABLE KEYS */;
+
+INSERT INTO `order_types` (`id`, `type`)
+VALUES
+	(1,'order'),
+	(2,'preorder');
+
+/*!40000 ALTER TABLE `order_types` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
 # Dump of table orders
 # ------------------------------------------------------------
 
@@ -205,9 +254,9 @@ DROP TABLE IF EXISTS `orders`;
 
 CREATE TABLE `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `bag_id` int(11) NOT NULL,
-  `payment_id` int(11) NOT NULL,
+  `order_type_id` int(11) NOT NULL,
   `order_status_id` int(11) NOT NULL,
+  `bag_id` int(11) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -283,8 +332,8 @@ CREATE TABLE `products` (
 DROP TABLE IF EXISTS `roles`;
 
 CREATE TABLE `roles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `role` varchar(15) NOT NULL,
+  `id` int(11) NOT NULL,
+  `role` varchar(25) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -293,39 +342,17 @@ LOCK TABLES `roles` WRITE;
 
 INSERT INTO `roles` (`id`, `role`)
 VALUES
-	(22,'admin'),
-	(32,'user'),
-	(42,'customer'),
-	(52,'merchant');
+	(0,'god'),
+	(1,'admin'),
+	(2,'user'),
+	(3,'cust'),
+	(4,'merch'),
+	(5,'merch_admin'),
+	(6,'merch_emp'),
+	(7,'club_ownr'),
+	(8,'club_mbr');
 
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table users
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `users`;
-
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(245) NOT NULL,
-  `password` varchar(245) NOT NULL,
-  `is_subscribed` tinyint(1) NOT NULL,
-  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-
-INSERT INTO `users` (`id`, `user_name`, `password`, `is_subscribed`, `created_date`, `updated_date`)
-VALUES
-	(272,'jonny','000',1,'2017-11-06 19:11:12','2017-11-14 22:43:28'),
-	(281,'tootsmcgee','funkystarfish',1,'2017-11-16 03:20:02','2017-11-16 03:20:02');
-
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
