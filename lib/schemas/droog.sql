@@ -198,7 +198,7 @@ DROP TABLE IF EXISTS `inventory`;
 
 CREATE TABLE `inventory` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) NOT NULL,
+  `product_code` varchar(10) NOT NULL,
   `quantity` smallint(9) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
