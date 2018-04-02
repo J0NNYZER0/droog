@@ -28,6 +28,7 @@ DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE `accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(245) NOT NULL,
+  `email` varchar(245) NOT NULL,
   `password` varchar(245) NOT NULL,
   `is_subscribed` tinyint(1) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -318,7 +319,7 @@ CREATE TABLE `products` (
   `size` varchar(4) NOT NULL,
   `color` varchar(20) NOT NULL,
   `gender` varchar(2) NOT NULL,
-  `release` decimal(3,2) NOT NULL,
+  `release` tinyint(4) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
