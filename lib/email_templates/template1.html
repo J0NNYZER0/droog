@@ -1,3 +1,4 @@
+<!--http://tedgoas.github.io/Cerberus/-->
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -28,7 +29,36 @@
 
     <!-- CSS Reset : BEGIN -->
     <style>
-
+        @font-face {
+          font-family: 'NeutrafaceDisplayTitling';
+          src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.eot');
+          src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.eot?#iefix') format('embedded-opentype'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.woff2') format('woff2'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.woff') format('woff'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.ttf') format('truetype');
+          font-weight: 900;
+          font-style: normal;
+        }
+        @font-face {
+          	font-family: 'NeutrafaceDisplayMedium';
+          	src: url('./../assets/fonts/neutraface/Neutraface2Display-Medium.eot');
+          	src: url('./../assets/fonts/neutraface/Neutraface2Display-Medium.eot?#iefix') format('embedded-opentype'),
+          		url('./../assets/fonts/neutraface/Neutraface2Display-Medium.woff2') format('woff2'),
+          		url('./../assets/fonts/neutraface/Neutraface2Display-Medium.woff') format('woff'),
+          		url('./../assets/fonts/neutraface/Neutraface2Display-Medium.ttf') format('truetype')
+          	font-weight: 500;
+          	font-style: normal;
+          }
+        @font-face {
+          font-family: 'NeutrafaceDisplayBold';
+          src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.eot');
+          src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.eot?#iefix') format('embedded-opentype'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.woff2') format('woff2'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.woff') format('woff'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.ttf') format('truetype');
+          font-weight: bold;
+          font-style: normal;
+        }
         /* What it does: Remove spaces around the email design added by some email clients. */
         /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
         html,
@@ -88,6 +118,16 @@
             line-height: inherit !important;
         }
 
+        h1 {
+          font-family: 'NeutrafaceDisplayTitling';
+          text-align: center;
+          font-size: 30px;
+          margin: 0 0 10px 0;
+          line-height: 125%;
+          color: #333333;
+          font-weight: normal;
+        }
+
         /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
         .a6S {
             display: none !important;
@@ -101,6 +141,8 @@
         /* What it does: Prevents underlining the button text in Windows 10 */
         .button-link {
             text-decoration: none !important;
+            font-family: 'NeutrafaceDisplayTitling';
+            font-size: 18px;
         }
 
         /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
@@ -206,13 +248,13 @@
             <![endif]-->
 
             <!-- Email Header : BEGIN -->
-            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+            <!--table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
                 <tr>
                     <td style="padding: 20px 0; text-align: center">
                         <img src="http://placehold.it/200x50" width="200" height="50" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
                     </td>
                 </tr>
-            </table>
+            </table-->
             <!-- Email Header : END -->
 
             <!-- Email Body : BEGIN -->
@@ -221,7 +263,7 @@
                 <!-- Hero Image, Flush : BEGIN -->
                 <tr>
                     <td bgcolor="#ffffff" align="center">
-                        <img src="http://placehold.it/1200x600" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; margin: auto;" class="g-img">
+                        <img src="https://s3-us-west-1.amazonaws.com/vellocet/test/29060577_185809842206979_6852737535388223525_o.png" width="600" height="" alt="alt_text" border="0" align="center" style="width: 100%; max-width: 600px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555; margin: auto;" class="g-img">
                     </td>
                 </tr>
                 <!-- Hero Image, Flush : END -->
@@ -232,8 +274,8 @@
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px; font-family: sans-serif; font-size: 15px; line-height: 140%; color: #555555;">
-                                    <h1 style="margin: 0 0 10px 0; font-family: sans-serif; font-size: 24px; line-height: 125%; color: #333333; font-weight: normal;">You Created An Account!</h1>
-                                    <p style="margin: 0;">Just to be on the safe side we would like to know it is you. So please click the button below to verify your email.</p>
+                                    <h1 class="neutraface">You Created An Account!</h1>
+                                    <p class="" style="margin: 0;">Just to be on the safe side we would like to know it is you. So please click the button below to verify your email.</p>
                                 </td>
                             </tr>
                             <tr>

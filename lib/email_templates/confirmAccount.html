@@ -1,0 +1,174 @@
+<!--http://tedgoas.github.io/Cerberus/-->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+
+    <!-- Web Font / @font-face : END -->
+
+    <!-- CSS Reset : BEGIN -->
+    <style>
+      @font-face {
+        font-family: 'NeutrafaceDisplayTitling';
+        src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.eot');
+        src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.eot?#iefix') format('embedded-opentype'),
+          url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.woff2') format('woff2'),
+          url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.woff') format('woff'),
+          url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Titling.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+      }
+      @font-face {
+          font-family: 'NeutrafaceDisplayMedium';
+          src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Medium.eot');
+          src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Medium.eot?#iefix') format('embedded-opentype'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Medium.woff2') format('woff2'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Medium.woff') format('woff'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Medium.ttf') format('truetype');
+          font-weight: 500;
+          font-style: normal;
+        }
+      @font-face {
+          font-family: 'NeutrafaceDisplayBold';
+          src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.eot');
+          src: url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.eot?#iefix') format('embedded-opentype'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.woff2') format('woff2'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.woff') format('woff'),
+            url('https://s3-us-west-1.amazonaws.com/vellocet/neutraface/Neutraface2Display-Bold.ttf') format('truetype');
+          font-weight: 500;
+          font-style: normal;
+        }
+      body {
+        padding: 2em;
+        font-family: 'NeutrafaceDisplayBold';
+        font-size: 2em;
+        background: radial-gradient(circle, #fff 10%, #666 99.9%);
+      }
+      h1 {
+        font-family: 'NeutrafaceDisplayTitling';
+        text-align: center;
+        font-size: 30px;
+        margin: 10px 0;
+        font-weight: normal;
+      }
+      p {
+        margin: 0 15px;
+        text-align: center;
+      }
+
+      .wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .wrapper > * {
+        padding: 10px;
+        flex: 1 100%;
+      }
+
+      .header {
+        font-family: 'NeutrafaceDisplayTitling';
+      }
+
+      .logo {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        display: block;
+        background: url('https://s3-us-west-1.amazonaws.com/vellocet/images/ludwig.svg') 100% / 100% no-repeat;
+      }
+
+      .footer {
+      }
+
+      .main {
+        text-align: left;
+      }
+
+      .aside-1 {
+      }
+
+      .aside-2 {
+      }
+
+      .button {
+        width: auto;
+        padding: 10px 20px;
+        font-family: 'NeutrafaceDisplayTitling';
+        text-shadow: 1px 1px 3px rgba(60, 60, 60, 0.6);
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        border: 3px solid #000;
+        outline: none;
+        background-color: #333;
+        display: inline-block;
+        /*margin: 35px auto;*/
+      }
+
+      @media all and (min-width: 600px) {
+      .aside { flex: 1 auto; }
+      }
+
+      @media all and (min-width: 800px) {
+      .main    { flex: 3 0px; }
+      .aside-1 { order: 1; }
+      .main    { order: 2; }
+      .aside-2 { order: 3; }
+      .footer  { order: 4; }
+      }
+
+    </style>
+    <!-- CSS Reset : END -->
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+
+</head>
+  <body>
+    <div class="wrapper">
+      <header class="header"><span class="logo" /></header>
+      <article class="main">
+        <h1>Hello!</h1>
+        <p>You recently created an account with us. Please click the button to verify it.</p><br/>
+        <p>You have 30 minutes. Thanks!</p><br/>
+        <p style="text-align: center">
+          <a disabled="" class="button">Verify Your Email</a>
+        </p><br/>
+      </article>
+      <aside class="aside aside-1"></aside>
+      <aside class="aside aside-2"></aside>
+      <footer class="footer">&copy; 2018 Vellocet</footer>
+    </div>
+  </body>
+</html>
